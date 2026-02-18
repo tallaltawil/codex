@@ -14,6 +14,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: "Manrope", "Segoe UI", sans-serif;
@@ -34,6 +38,31 @@ body {
   border: 1px solid var(--panel-border);
   backdrop-filter: blur(12px);
   box-shadow: 0 22px 60px rgba(2, 6, 23, 0.34);
+}
+
+.top-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.top-nav a {
+  text-decoration: none;
+  color: #0b3a57;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(14, 165, 233, 0.24);
+  transition: transform 160ms ease, background-color 160ms ease;
+}
+
+.top-nav a:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.95);
 }
 
 .hero {
@@ -92,6 +121,18 @@ p {
   line-height: 1.66;
 }
 
+.site-footer {
+  margin-top: 22px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(15, 23, 42, 0.16);
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
 @media (max-width: 640px) {
   .container {
     margin: 16px auto;
@@ -99,10 +140,16 @@ p {
     border-radius: 18px;
   }
 
+  .top-nav {
+    justify-content: flex-start;
+  }
+
   .topic-card {
     padding: 16px;
   }
+
+  .site-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
-
-
-
